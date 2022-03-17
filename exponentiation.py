@@ -15,3 +15,20 @@ to understand which choice results in a larger amount.
 
 '''
 
+n = 0.01
+
+days = 0
+
+while days < 30:
+
+    n = n * 2
+
+    days += 1
+
+if n > 1000000:
+    print(f'The value of n is {n:,} and is greater than 1,000,000.\n')
+    print(f'So, {n:,} is a better investment.')
+
+else:
+    print(f'The value of n is {n:,} and is less than 1,000,000.')
+    print(f'So, {n:,} is not a better investment.')
