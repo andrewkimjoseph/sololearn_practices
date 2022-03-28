@@ -8,14 +8,15 @@ class BankAccount():
         self.name = name
         self.balance = balance
     
-    def acc_no(self):
+    def randStr(chars = string.ascii_uppercase + string.digits, n=8):
+        num = ''
+        num = num.join(random.choice(chars) for _ in range(n))
+        return num
         
-        def randStr(chars = string.ascii_uppercase + string.digits, n=8):
-            num = ''
-            num = num.join(random.choice(chars) for _ in range(n))
-            return num
+    def acc_no(self, randStr):
+        
         number = randStr()
-        
+
         return f'Dear {self.name}, your Account Number is: {self.number}.'
 
     def deposit (self, amount):
